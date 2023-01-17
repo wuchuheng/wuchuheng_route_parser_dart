@@ -1,15 +1,20 @@
-<p align="center"><h1>wuchuheng_route_parser</h1></p>
+<h1> <p align="center"> wuchuheng_route_parser </p> </h1>
 
-## 2 What is wuchuheng_route_parser?
+<p align="center">
+<a href="https://github.com/wuchuheng/wuchuheng_route_parser_dart/actions/workflows/test.yml">
+<img src="https://github.com/wuchuheng/wuchuheng_route_parser_dart/actions/workflows/test.yml/badge.svg" />
+</a>
+</p>
+
 
 The wuchuheng_route_parser used to parse the information about route and to map route name to widget in flutter.
 
-## 3 What is the features in  wuchuheng_route_parser?
+## 1 Features
 
 * To parse the information about route in dart/flutter
 * To get widget from map data that the route name map to widget.
 
-## 4 How to use the library in dart or flutter?
+## 2 Installing
 
 
 Go to the root of  your flutter or dart project。 and then run the flowing command:
@@ -23,9 +28,9 @@ Or Install with dart
 $ dart pub add wuchuheng_route_parser
 ```
 
-## 5 How to use the library?
+## 3 Usage
 
-### 5.1 To map the widget with route name.
+### 4.1 To map the widget with route name.
 ```dart
 RoutesType routes = {
   '/': Text('/'),
@@ -37,13 +42,13 @@ RoutesType routes = {
 Widget? resultWidget = parseRouteToWidget(routes, '/foods/1');
 ```
 
-### 5.2 To parse the information with route name
+### 4.2 To parse the information with route name
 ```dart
 final result = parseRouteInfo('/foods/:id/:name', '/foods/1/apple');
 print(result); // {id: '1', name: 'apple'} 
 ```
 
-## 6 Contributing
+## 5 Contributing
 
 You can contribute in one of three ways:
 
@@ -51,7 +56,7 @@ You can contribute in one of three ways:
 2. Answer questions or fix bugs on the [issue tracker](https://github.com/wuchuheng/wuchuheng_route_parser_dart/issues).
 3. Contribute new features or update the wiki.
 
-## 7 License
+## 6 License
 
 MIT
 
