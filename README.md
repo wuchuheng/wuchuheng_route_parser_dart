@@ -33,9 +33,9 @@ $ dart pub add wuchuheng_route_parser
 ### 4.1 To map the widget with route name.
 ```dart
 RoutesType routes = {
-  '/': Text('/'),
-  '/foods/:id/:name': Text('/foods/:id/:name'),
-  '/foods/:id': Text('/foods/:id'),
+  '/': () => Text('/'),
+  '/foods/:id/:name': () => Text('/foods/:id/:name'),
+  '/foods/:id': () => Text('/foods/:id'),
 };
 
 // Then get the Text('/foods/:id');

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'exceptions/routing_format_error_exception.dart';
 
-typedef RoutesType = Map<String, Widget>;
+typedef RoutesType = Map<String, Widget Function()>;
 
 /// Get Widget with routeName
-Widget? parseRouteToWidget(RoutesType routes, String routeName) {
+Widget? Function() parseRouteToWidget(RoutesType routes, String routeName) {
   for (var nameInRoute in routes.keys) {
     final RegExp regExp = RegExp(r"\/:([A-z]\w+)");
     final matchResult = regExp.allMatches(nameInRoute);
@@ -30,11 +30,13 @@ Widget? parseRouteToWidget(RoutesType routes, String routeName) {
     }
     bool isOk = RegExp(routeReg).hasMatch(routeName);
     if (isOk) {
-      return routes[nameInRoute];
+      return routes[nameInRoute]!;
     }
   }
 
-  return null;
+  return () {
+    return null;
+  };
 }
 
 typedef RouteInfoType = Map<String, String>;

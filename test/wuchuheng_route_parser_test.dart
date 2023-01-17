@@ -4,15 +4,15 @@ import 'package:wuchuheng_route_parser/wuchuheng_route_parser.dart';
 
 void main() {
   RoutesType routes = {
-    '/': Text('/'),
-    '/foods/:id/:name': Text('/foods/:id/:name'),
-    '/foods/:id': Text('/foods/:id'),
+    '/': () => Text('/'),
+    '/foods/:id/:name': () => Text('/foods/:id/:name'),
+    '/foods/:id': () => Text('/foods/:id'),
   };
 
   test('Get Widget by route', () async {
-    Widget? resultWidget = parseRouteToWidget(routes, '/foods/1');
-    expect(resultWidget, isNotNull);
-    expect((resultWidget as Text).data, '/foods/:id');
+    Widget? Function() resultWidget = parseRouteToWidget(routes, '/foods/1');
+    expect(resultWidget(), isNotNull);
+    expect((resultWidget() as Text).data, '/foods/:id');
   });
 
   test('Parse information with routeName', () async {
