@@ -1,4 +1,4 @@
-name: Testing dart
+name: Testing Library
 
 on:
   push:
@@ -7,6 +7,7 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    name: Testing Library
 
     steps:
       - uses: actions/checkout@v3
