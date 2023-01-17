@@ -1,10 +1,10 @@
 name: wuchuheng_route_parser
 description: Routing Resolution Library.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/wuchuheng/wuchuheng_route_parser_dart
 
 environment:
-  sdk: '>=2.18.6 <3.0.0'
+  sdk: '>=2.18.6 <=3.3.10'
 
 dependencies:
   flutter:

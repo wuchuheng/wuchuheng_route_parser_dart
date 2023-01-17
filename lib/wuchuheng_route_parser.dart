@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'exceptions/routing_format_error_exception.dart';
 
-typedef RoutesType = Map<String, Widget Function()>;
+typedef RoutesType = Map<String, Widget? Function()>;
 
 /// Get Widget with routeName
 Widget? Function() parseRouteToWidget(RoutesType routes, String routeName) {

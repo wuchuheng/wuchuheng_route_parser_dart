@@ -6,7 +6,11 @@
 
 - chore: Create MIT Licence
 - docs: Update README.md
-- 
+
 ## 1.0.2
 
 - refactor: refactoring the parseRouteToWidget function
+
+## 1.0.3
+
+- chore: update pubspec.yam
