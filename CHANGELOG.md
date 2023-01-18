@@ -14,3 +14,7 @@
 ## 1.0.3
 
 - chore: update pubspec.yam
+- 
+## 1.0.4
+
+- fix: Fix the issue that routes without parameters cannot be matched.

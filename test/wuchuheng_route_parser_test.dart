@@ -9,6 +9,12 @@ void main() {
     '/foods/:id': () => Text('/foods/:id'),
   };
 
+  test('Get route widget for route /', () {
+    Widget? Function() resultWidget = parseRouteToWidget(routes, '/');
+    expect(resultWidget(), isNotNull);
+    expect((resultWidget() as Text).data, '/');
+  });
+
   test('Get Widget by route', () async {
     Widget? Function() resultWidget = parseRouteToWidget(routes, '/foods/1');
     expect(resultWidget(), isNotNull);

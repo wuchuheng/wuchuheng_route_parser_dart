@@ -1,6 +1,6 @@
 name: wuchuheng_route_parser
 description: Routing Resolution Library.
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/wuchuheng/wuchuheng_route_parser_dart
 
 environment:

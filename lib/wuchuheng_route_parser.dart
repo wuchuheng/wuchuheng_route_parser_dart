@@ -10,6 +10,10 @@ Widget? Function() parseRouteToWidget(RoutesType routes, String routeName) {
     final RegExp regExp = RegExp(r"\/:([A-z]\w+)");
     final matchResult = regExp.allMatches(nameInRoute);
     if (matchResult.isEmpty) {
+      if (nameInRoute == routeName) {
+        return routes[nameInRoute]!;
+      }
+
       continue;
     }
 
